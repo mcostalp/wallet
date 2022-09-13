@@ -2,7 +2,6 @@
   "name": "sd-0x-project-trybewallet",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mcostalp.github.io/wallet",
   "engines": {
     "node": "16"
   },
