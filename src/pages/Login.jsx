@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { setUser } from '../redux/actions/index';
-import "../style/style.css"
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { setUser } from "../redux/actions/index";
+import "../style/style.css";
 
 class Login extends React.Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     isFormValid: false,
   };
 
@@ -29,45 +29,45 @@ class Login extends React.Component {
     const { password, email, isFormValid } = this.state;
     const { dispatch } = this.props;
     return (
-      <div className='flex flex-col justify-center content-center bg-blue-300 p-4 rounded-2xl shadow-2xl'>
-        <div id='title' className='bg-gradient-to-r from-purple-400 to-blue-500 justify-center py-8 mb-4 rounded-2xl flex'>
-          <h1 className="text-3xl text-white font-bold">My Wallet</h1>
-        </div>
-        <form className='flex flex-col gap-6 items-center justify-center'>
-          <h4 className='text-center'>Login</h4>
+      <div className="flex flex-col justify-center content-center bg-slate-100 p-4 rounded-2xl shadow-2xl w-[525px] h-[356px]">
+        <div
+          id="title"
+          className="mb-[43.83px] justify-center self-center py-8 flex bg-title bg-cover w-[300px] h-[50px]"
+        />
+        <form className="flex flex-col gap-3 items-center justify-center">
           <label htmlFor="email">
-            Email
             <input
-              className='text-white border-2 border-gray-200 rounded-md hover:border-gray-400'
+              className="text-white border-2 border-blue-800 rounded-md hover:border-gray-400 w-[330px] h-[40px]"
               data-testid="email-input"
               id="email"
               name="email"
               type="email"
-              value={ email }
-              onChange={ this.handleChange }
+              value={email}
+              onChange={this.handleChange}
               required
+              placeholder="Email"
             />
           </label>
           <label htmlFor="password">
-            Senha
             <input
-              className='border-2 border-gray-200 rounded-md hover:border-gray-400'
+              className="border-2 border-blue-800 rounded-md hover:border-gray-400 w-[330px] h-[40px]"
               data-testid="password-input"
               id="password"
               name="password"
               type="password"
-              value={ password }
-              onChange={ this.handleChange }
+              value={password}
+              onChange={this.handleChange}
               required
+              placeholder="Senha"
             />
           </label>
           <Link to="/carteira">
             <button
-              className='rounded-xl p-2 bg-slate-400 cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed'
+              className="rounded-md p-2 bg-blue-800 cursor-pointer disabled:cursor-not-allowed text-slate-100 w-[330px] h-[40px]"
               data-testid="submit-review-btn"
               type="button"
-              disabled={ !isFormValid }
-              onClick={ () => dispatch(setUser(email)) }
+              disabled={!isFormValid}
+              onClick={() => dispatch(setUser(email))}
             >
               Entrar
             </button>

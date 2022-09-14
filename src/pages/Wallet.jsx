@@ -6,8 +6,7 @@ import WalletForm from '../components/WalletForm';
 class Wallet extends React.Component {
   render() {
     return (
-      <div className="h-screen p-2">
-        <h1 className='text-3xl font-bold'>Wallet</h1>
+      <div className="h-screen p-2 flex flex-col items-center w-4/6">
         <Header />
         <WalletForm />
         <Table />

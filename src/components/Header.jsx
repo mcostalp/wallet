@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-// import wallet from '../redux/reducers/wallet';
+import { faCoins, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Header extends Component {
   render() {
@@ -12,10 +13,15 @@ class Header extends Component {
       return acc + (value * ask);
     }, 0);
     return (
-      <header>
-        <h2 data-testid="email-field">{ email }</h2>
-        <h3 data-testid="total-field">{ totalField.toFixed(2) }</h3>
-        <h3 data-testid="header-currency-field">BRL</h3>
+      <header className="flex flex-wrap justify-center bg-white w-full h-36">
+        <div className='flex flex-wrap justify-around items-center w-full'>
+        <div
+          id="title"
+          className="self-center py-8 flex bg-title bg-cover w-[300px] h-[50px]"
+        />
+        <h3 data-testid="total-field" className='text-blue-600'><FontAwesomeIcon icon={faCoins} /> Total de despesas { totalField.toFixed(2) }BRL</h3>
+        <h2 data-testid="email-field" className='text-green-600'><FontAwesomeIcon icon={faUser} /> { email }</h2>
+        </div>
       </header>
     );
   }
