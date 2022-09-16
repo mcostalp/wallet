@@ -16,7 +16,7 @@ class Table extends Component {
     const { expenses } = this.props;
     return (
       <div className="w-full h-full bg-blue-700 ">
-        <table className="table-fixed w-full">
+        <table className="table-auto w-full">
           <thead className="">
             <tr className="text-white">
               <th>Descrição</th>
