@@ -609,10 +609,6 @@ video {
   table-layout: auto;
 }
 
-.table-fixed {
-  table-layout: fixed;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -730,14 +726,6 @@ video {
   background-size: cover;
 }
 
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-.bg-center {
-  background-position: center;
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -820,22 +808,17 @@ video {
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
+.focus\:text-black:focus {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .disabled\:cursor-not-allowed:disabled {
   cursor: not-allowed;
 }
 
 @media (min-width: 768px) {
-  .md\:w-3\/6 {
-    width: 50%;
-  }
-
   .md\:w-4\/6 {
     width: 66.666667%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:w-1\/2 {
-    width: 50%;
   }
 }

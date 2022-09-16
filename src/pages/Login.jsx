@@ -37,7 +37,7 @@ class Login extends React.Component {
         <form className="flex flex-col gap-3 items-center justify-center">
           <label htmlFor="email">
             <input
-              className="text-white border-2 border-blue-800 rounded-md hover:border-gray-400 w-[330px] h-[40px]"
+              className= "border-2 border-blue-800 rounded-md hover:border-gray-400 w-[330px] h-[40px]"
               data-testid="email-input"
               id="email"
               name="email"
