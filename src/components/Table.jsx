@@ -15,19 +15,37 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <div className="w-full h-full bg-blue-700 ">
-        <table className="table-auto w-full">
-          <thead className="">
-            <tr className="text-white">
-              <th>Descrição</th>
-              <th>Tag</th>
-              <th>Método de pagamento</th>
-              <th>Valor</th>
-              <th>Moeda</th>
-              <th>Câmbio utilizado</th>
-              <th>Valor convertido</th>
-              <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+      <div className="bg-blue-700 p-3 text-sm font-semibold tracking-wide text-left">
+        <table className="p-3 text-sm font-semibold tracking-wide text-left">
+          <thead className="p-3 text-sm font-semibold tracking-wide text-left">
+            <tr className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Descrição
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Tag
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Método de pagamento
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Valor
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Moeda
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Câmbio utilizado
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Valor convertido
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Moeda de conversão
+              </th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                Editar/Excluir
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -43,16 +61,35 @@ class Table extends Component {
               } = expense;
               const { ask, name } = exchangeRates[currency];
               return (
-                <tr className="text-white text-center" key={`expense-${id}`}>
-                  <td>{description}</td>
-                  <td>{tag}</td>
-                  <td>{method}</td>
-                  <td>{(+value).toFixed(2)}</td>
-                  <td>{name}</td>
-                  <td>{(+ask).toFixed(2)}</td>
-                  <td>{(ask * value).toFixed(2)}</td>
-                  <td>Real</td>
-                  <td>
+                <tr
+                  className="text-white p-3 text-sm font-semibold tracking-wide text-left"
+                  key={`expense-${id}`}
+                >
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {description}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {tag}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {method}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {(+value).toFixed(2)}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {name}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {(+ask).toFixed(2)}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    {(ask * value).toFixed(2)}
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
+                    Real
+                  </td>
+                  <td className="text-white p-3 text-sm font-semibold tracking-wide text-left">
                     <button
                       data-testid="delete-btn"
                       type="button"

@@ -29,7 +29,7 @@ class Login extends React.Component {
     const { password, email, isFormValid } = this.state;
     const { dispatch } = this.props;
     return (
-      <div className="flex flex-col justify-center content-center bg-slate-100 p-4 rounded-2xl shadow-2xl w-[525px] h-[356px]">
+      <div className="flex flex-col justify-center items-center bg-slate-100 p-4 rounded-2xl shadow-2xl">
         <div
           id="title"
           className="mb-[43.83px] justify-center self-center py-8 flex bg-title bg-cover w-[300px] h-[50px]"
@@ -37,7 +37,7 @@ class Login extends React.Component {
         <form className="flex flex-col gap-3 items-center justify-center">
           <label htmlFor="email">
             <input
-              className= "border-2 border-blue-800 rounded-md hover:border-gray-400 w-[330px] h-[40px]"
+              className="border-2 border-blue-800 rounded-md hover:border-gray-400 w-[330px] h-[40px]"
               data-testid="email-input"
               id="email"
               name="email"

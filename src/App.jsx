@@ -5,7 +5,7 @@ import Wallet from "./pages/Wallet";
 
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen bg-main-bg bg-green-500 bg-cover">
+    <div className="flex justify-center items-center h-full">
       <Switch>
         <Route exact path="/wallet" component={Login} />
         <Route exact path="/carteira" component={Wallet} />
